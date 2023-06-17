@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Sales.API.Date;
+using Sales.API.Data;
 
 #nullable disable
 
 namespace Sales.API.Migrations
 {
-    [DbContext(typeof(DataContex))]
+    [DbContext(typeof(DataContext))]
     [Migration("20230427210325_InitialDb")]
     partial class InitialDb
     {

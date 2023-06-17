@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
 //using Microsoft.EntityFrameworkCore.Tools;
-using Sales.API.Date;
+using Sales.API.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<DataContex>(x => x.UseSqlServer("name=ConectionDB"));
+builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer("name=ConectionDB"));
 
 var app = builder.Build();
 
