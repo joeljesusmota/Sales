@@ -22,9 +22,16 @@ namespace Sales.API.Controllers
 		}
 
 		[HttpGet("{id:int}")]
-		public async Task<IActionResult> GetAsync(int id)
+		public async Task<IActionResult> Get(int id)
 		{
-			return Ok(await _context.Countries.ToListAsync());
+			var country = await _context.Countries.FirstOrDefaultAsync(x => x.Id == id);
+			if (country is null)
+			{
+				return NotFound();
+			}
+
+			return Ok(country);
+
 		}
 
 		[HttpPost]
