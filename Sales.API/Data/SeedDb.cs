@@ -25,14 +25,6 @@ namespace Sales.API.Data
 				_context.Countries.Add(new Country { Name = "Usa" });
 				await _context.SaveChangesAsync();
 			}
-
-			/*if (!_context.Categories.Any())
-			{
-				_context.Categories.Add(new Category { Name = "Test" });
-				_context.Categories.Add(new Category { Name = "Test" });
-				_context.Categories.Add(new Category { Name = "Test" });
-				await _context.SaveChangesAsync();
-			}*/
 		}
 	}
 }
